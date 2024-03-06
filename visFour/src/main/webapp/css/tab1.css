@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  width: 1rem;
+}
+body {
+  background: url("../images/bg.jpg") no-repeat top center;
+  line-height: 1.15;
+}
+header {
+  position: relative;
+  height: 1.25rem;
+  background: url("../images//head_bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+header h1 {
+  font-size: 0.475rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1rem;
+  color: #ffeb7b;
+}
+header .showTime {
+  position: absolute;
+  right: 0.375rem;
+  top: 0;
+  line-height: 0.9375rem;
+  color: aquamarine;
+  font-size: 0.25rem;
+}
+.mainbox {
+  min-width: 1024px;
+  max-width: 1920px;
+  padding: 0.125rem 0.125rem 0;
+}
+.mainbox .row-1 {
+  height: 6.6rem;
+  display: flex;
+}
+.mainbox .row-1 .column {
+  flex: 3;
+}
+.mainbox .row-1 .controller {
+  display: flex;
+}
+.mainbox .row-1 .controller .column-controller:nth-child(1) {
+  flex: 4;
+}
+.mainbox .row-1 .controller .column-controller:nth-child(1) ul {
+  list-style-type: none;
+  padding: 0;
+}
+.mainbox .row-1 .controller .column-controller:nth-child(1) li {
+  display: flex;
+  font-size: 12px;
+  color: #ffeb7b;
+  border: 1px solid #ffffff;
+  padding: 0.125rem;
+  margin-bottom: 0.025rem;
+  align-items: center;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+  /* 添加阴影效果 */
+  border-radius: 5px;
+}
+.mainbox .row-1 .controller .column-controller:nth-child(1) li i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+.mainbox .row-1 .controller .column-controller:nth-child(1) li .value {
+  flex-grow: 1;
+  text-align: center;
+}
+.mainbox .row-1 .controller .column-controller:nth-child(2) {
+  flex: 6;
+}
+.mainbox .row-1 .controller .column-controller:nth-child(2) .name {
+  text-align: center;
+  font-size: 12px;
+  color: #ffeb7b;
+  border: 1px solid #ffffff;
+  padding: 0.125rem;
+  margin-bottom: 1px;
+  align-items: center;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+  /* 添加阴影效果 */
+  border-radius: 5px;
+}
+.mainbox .row-1 .time-slider {
+  margin-top: 0.15rem;
+  height: 1rem;
+  background-color: pink;
+}
+.mainbox .row-1 .center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.6rem;
+  /* 设置高度以居中按钮在垂直方向上 */
+}
+.mainbox .row-1 .center-button #dateButton {
+  cursor: pointer;
+  border: 3px solid #4c9bfd;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #4c9bfd;
+}
+.mainbox .row-1 #calendarContainer {
+  position: relative;
+  cursor: pointer;
+  border: 3px solid #4c9bfd;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #4c9bfd;
+}
+.mainbox .row-1 #calendar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 10;
+  font-family: Arial, sans-serif;
+  width: 250px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.mainbox .row-1 .slider-container {
+  height: 1.08rem;
+}
+.mainbox .row-2 {
+  height: 5rem;
+  display: flex;
+}
+.mainbox .row-2 .column-row-2:nth-child(1) {
+  flex: 6;
+}
+.mainbox .row-2 .column-row-2:nth-child(2) {
+  flex: 3;
+}
+.mainbox .panel {
+  background-color: pink;
+  position: relative;
+  height: 3.875rem;
+  padding: 0 0.1875rem 0.5rem;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+  margin-bottom: 0.1875rem;
+  background: url("../images/line.png") rgba(255, 255, 255, 0.03);
+}
+.mainbox .panel::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel .panel-footer::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel .panel-footer::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel .chart {
+  height: 3rem;
+}
+.mainbox .panel h2 {
+  height: 0.6rem;
+  color: #04A6B5;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.25rem;
+  font-weight: 400;
+}
+.mainbox .G {
+  margin-top: 0.2rem;
+  height: 6.2rem;
+}
+.mainbox .G .chart {
+  height: 4.8rem;
+}
+.mainbox .G .chart-a {
+  height: 2.3rem;
+}
+.mainbox .D {
+  margin-top: 0.2rem;
+  height: 6.2rem;
+}
+.mainbox .D .chart {
+  height: 6.2rem;
+}
+.mainbox .D .gas-c {
+  text-align: center;
+}
+.mainbox .D .gas-c .gas {
+  margin-top: 0.11rem;
+  border: 3px solid #4c9bfd;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #4c9bfd;
+  cursor: pointer;
+}
+.mainbox .D .gas-c .yearSelect-gas {
+  cursor: pointer;
+  border: 3px solid #4c9bfd;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #4c9bfd;
+}
+.mainbox .C {
+  margin-top: 0.2rem;
+  height: 6.2rem;
+}
+.mainbox .C .chart {
+  height: 6.2rem;
+}
+.mainbox .C .yearSelect-c {
+  text-align: center;
+}
+.mainbox .C .yearSelect-c .yearSelect {
+  cursor: pointer;
+  border: 3px solid #4c9bfd;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #4c9bfd;
+  margin-top: 0.1rem;
+}
+.mainbox .F {
+  height: 5rem;
+}
+.mainbox .F .chart {
+  height: 4.2rem;
+}
+.mainbox .I {
+  height: 5rem;
+}
+.mainbox .I .chart {
+  height: 4.2rem;
+}
